@@ -1,4 +1,4 @@
-export const backendServerApiUrl = 'http:localhost:8000/'
+export const backendServerApiUrl = 'http://localhost:8000/'
 export const titleName = 'SitePow'
 export const websiteName = 'ไซต์พาว ออนไลน์สโตร์'
 export const adminBaseUrl = '/sp_admin'
