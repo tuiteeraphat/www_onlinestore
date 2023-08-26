@@ -20,11 +20,11 @@ import IconWithBadge from './IconWithBadge'
 import MenuMobile from './MenuMobile'
 import { useRouter } from 'next/router'
 import { useSelector, useDispatch } from 'react-redux'
-import category from '@/models/category'
 import LoginModel from '@/components/Login'
 import RegisterModel from '@/components/Register'
 import { checkAuthCustomer } from '@/utils/auth'
 import Cookies from 'js-cookie'
+import categoryType from '@/models/category'
 
 function Menu() {
     checkAuthCustomer()
@@ -148,20 +148,20 @@ function Menu() {
                         </HeaderLink>
                         <div className="group-hover:flex hidden absolute rounded border flex-col bg-mainMenuBgBlur backdrop-blur-md">
                             {categories &&
-                                categories.map((item: category) => {
+                                categories.map((item: categoryType) => {
                                     return (
                                         <React.Fragment
-                                            key={item.category_id.toString()}
+                                            key={item.id.toString()}
                                         >
                                             <div
                                                 className={`py-2 px-4 flex items-center cursor-pointer`}
                                             >
                                                 <FolderIcon className="h-5 mr-3" />
                                                 <Link
-                                                    href={`/category/${item.category_slug.toString()}`}
+                                                    href={`/category/${item.slug.toString()}`}
                                                     className="whitespace-nowrap"
                                                 >
-                                                    {`${item.category_name} (${item.product_count})`}
+                                                    {`${item.name} (0)`}
                                                 </Link>
                                             </div>
                                         </React.Fragment>
