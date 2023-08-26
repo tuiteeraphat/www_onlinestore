@@ -8,8 +8,8 @@ import {
 import { headerMenu } from '../utils/constants'
 import Link from 'next/link'
 import React from 'react'
-import category from '@/models/category'
 import { useSelector } from 'react-redux'
+import categoryType from '@/models/category'
 
 function MenuMobile() {
     const categories = useSelector((state: any) => state.category.data)
@@ -39,17 +39,17 @@ function MenuMobile() {
 
                     <div className="group-hover:flex px-5 flex-col hidden">
                         {categories &&
-                            categories.map((category: category) => {
+                            categories.map((category: categoryType) => {
                                 return (
                                     <React.Fragment
-                                        key={category.category_id.toString()}
+                                        key={category.id.toString()}
                                     >
                                         <Link
-                                            href={`/category/${category.category_slug.toString()}`}
+                                            href={`/category/${category.slug.toString()}`}
                                             className="py-2 flex items-center"
                                         >
                                             <FolderIcon className="h-5 mr-1" />
-                                            {`${category.category_name} (${category.product_count})`}
+                                            {`${category.name} (0)`}
                                         </Link>
                                     </React.Fragment>
                                 )
