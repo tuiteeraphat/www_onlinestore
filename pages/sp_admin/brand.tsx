@@ -125,7 +125,7 @@ export default function Index({ brandProps }: any) {
                                     <td className="border">{index + 1}</td>
                                     <td className="border">{item.id}</td>
                                     <td className="border">
-                                        {item.Category.name}
+                                        {item.Category?.name}
                                     </td>
                                     <td className="border">{item.name}</td>
                                     <td className="px-4 py-2 flex">
