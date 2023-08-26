@@ -1,0 +1,13 @@
+body {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* .dropdown:hover .dropdown-content,
+.dropdown-mobile:hover .dropdown-content-mobile {
+  display: flex;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
